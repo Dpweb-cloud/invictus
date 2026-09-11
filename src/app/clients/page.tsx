@@ -1,5 +1,20 @@
-import { clients } from "@/lib/data";
+import Image from "next/image";
 import { StaggerWrapper, FadeUpBox } from "@/components/ui/Animations";
+
+const clientLogos = [
+  { name: "ONGC",         logo: "/Photo/Client Logos/ONGC.png" },
+  { name: "EIL",          logo: "/Photo/Client Logos/EIL2.png" },
+  { name: "PRAJ",         logo: "/Photo/Client Logos/PRAJ.jpg" },
+  { name: "thyssenkrupp", logo: "/Photo/Client Logos/thyssenkrupp_logo.png" },
+  { name: "Sopan",        logo: "/Photo/Client Logos/Sopan.png" },
+  { name: "Fenix",        logo: "/Photo/Client Logos/fenix1.png" },
+  { name: "BPCL",         logo: "/Photo/Client Logos/BPCL.jpg" },
+  { name: "FlareTec",     logo: "/Photo/Client Logos/FlareTec.jpg" },
+  { name: "Reliance Industries", logo: "/Photo/Client Logos/RIL.jpg" },
+  { name: "SUEZ",         logo: "/Photo/Client Logos/suez.png" },
+  { name: "PGI",          logo: "/Photo/Client Logos/PGI1.jpg" },
+  { name: "Tooltech",     logo: "/Photo/Client Logos/Tooltech.jpg" },
+];
 
 export default function ClientsPage() {
   return (
@@ -23,9 +38,22 @@ export default function ClientsPage() {
           </FadeUpBox>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {clients.map((client, idx) => (
-              <FadeUpBox key={idx} className="bg-brand-primary-light rounded-2xl p-8 flex items-center justify-center border border-gray-100 hover:border-brand-accent transition-colors duration-300">
-                <span className="font-heading font-black text-xl md:text-2xl text-brand-primary-dark">{client.name}</span>
+            {clientLogos.map((client, idx) => (
+              <FadeUpBox
+                key={idx}
+                className="bg-brand-primary-light rounded-2xl p-8 flex flex-col items-center justify-center gap-4 border border-gray-100 hover:border-brand-accent hover:shadow-lg transition-all duration-300 group"
+              >
+                <div className="h-16 flex items-center justify-center">
+                  <Image
+                    src={client.logo}
+                    alt={client.name}
+                    width={140}
+                    height={64}
+                    className="object-contain max-h-14 w-auto grayscale group-hover:grayscale-0 transition-all duration-300"
+                    unoptimized
+                  />
+                </div>
+                <span className="text-sm font-semibold text-brand-primary-dark text-center">{client.name}</span>
               </FadeUpBox>
             ))}
           </div>

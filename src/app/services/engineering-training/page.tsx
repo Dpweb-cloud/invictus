@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, BookOpen, CheckCircle } from "lucide-react";
 import { StaggerWrapper, FadeUpBox } from "@/components/ui/Animations";
 
@@ -6,7 +7,14 @@ export default function EngineeringTrainingPage() {
   return (
     <div className="flex flex-col bg-background">
       <section className="bg-brand-primary pt-20 pb-24 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay"></div>
+        {/* Real training photo as background */}
+        <Image
+          src="/Photo/DSC05255_edited.jpg"
+          alt="Invictus training session"
+          fill
+          className="object-cover opacity-20"
+          unoptimized
+        />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="inline-flex items-center justify-center p-4 bg-white/10 rounded-2xl mb-8 backdrop-blur-sm">
             <BookOpen className="h-10 w-10 text-brand-accent" />
@@ -21,23 +29,51 @@ export default function EngineeringTrainingPage() {
       <section className="py-24 bg-white">
         <StaggerWrapper className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <FadeUpBox className="prose prose-lg max-w-none text-gray-700">
-            <h2 className="text-3xl font-heading font-bold text-brand-primary-dark mb-6">Bridging the Gap Between Academia & Industry</h2>
+            <h2 className="text-3xl font-heading font-bold text-brand-primary-dark mb-6">Bridging the Gap Between Academia &amp; Industry</h2>
             <p className="mb-8">
               The transition from academic theory to practical industrial design can be steep. Invictus Engineering offers highly specialized training modules designed to upskill fresh graduates and corporate employees.
             </p>
-            <p className="mb-12">
+            <p className="mb-8">
               Our training is conducted by senior engineers who actively work on live projects. We focus heavily on international codes (ASME, API), stress analysis, and modern 3D design tools.
             </p>
+          </FadeUpBox>
+
+          {/* Training gallery — real photos */}
+          <FadeUpBox className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <div className="relative rounded-2xl overflow-hidden aspect-video shadow-lg">
+              <Image
+                src="/Photo/DSC05255_edited.jpg"
+                alt="Stress analysis training session at Invictus"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-500"
+                unoptimized
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                <p className="text-white text-sm font-semibold">Live Training Session — Simplified Methods of Stress Analysis</p>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden aspect-video shadow-lg">
+              <Image
+                src="/Photo/D1438.jpg"
+                alt="3D modeling in Navisworks training"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-500"
+                unoptimized
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                <p className="text-white text-sm font-semibold">3D Modelling & Review — Autodesk Navisworks</p>
+              </div>
+            </div>
           </FadeUpBox>
 
           <FadeUpBox>
             <h3 className="text-2xl font-heading font-bold text-brand-primary-dark mb-6">Training Modules</h3>
             <div className="space-y-6 mb-12">
               <div className="bg-brand-primary-light p-8 rounded-2xl border border-gray-100">
-                <h4 className="text-xl font-bold text-brand-primary-dark mb-4">Piping Engineering & Stress Analysis</h4>
+                <h4 className="text-xl font-bold text-brand-primary-dark mb-4">Piping Engineering &amp; Stress Analysis</h4>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-700">
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-brand-accent mr-2" /> ASME B31.3 & B31.1 Codes</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-brand-accent mr-2" /> Pipe Sizing & Selection</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-brand-accent mr-2" /> ASME B31.3 &amp; B31.1 Codes</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-brand-accent mr-2" /> Pipe Sizing &amp; Selection</li>
                   <li className="flex items-center"><CheckCircle className="h-4 w-4 text-brand-accent mr-2" /> Caesar II Stress Analysis</li>
                   <li className="flex items-center"><CheckCircle className="h-4 w-4 text-brand-accent mr-2" /> Support Selection</li>
                 </ul>
@@ -46,7 +82,7 @@ export default function EngineeringTrainingPage() {
               <div className="bg-brand-primary-light p-8 rounded-2xl border border-gray-100">
                 <h4 className="text-xl font-bold text-brand-primary-dark mb-4">Static Equipment Engineering</h4>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-700">
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-brand-accent mr-2" /> ASME Sec VIII Div 1 & 2</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-brand-accent mr-2" /> ASME Sec VIII Div 1 &amp; 2</li>
                   <li className="flex items-center"><CheckCircle className="h-4 w-4 text-brand-accent mr-2" /> PV Elite Software</li>
                   <li className="flex items-center"><CheckCircle className="h-4 w-4 text-brand-accent mr-2" /> Heat Exchanger Design (TEMA)</li>
                   <li className="flex items-center"><CheckCircle className="h-4 w-4 text-brand-accent mr-2" /> Storage Tank Design (API 650)</li>

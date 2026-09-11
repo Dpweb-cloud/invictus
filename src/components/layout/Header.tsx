@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -46,18 +47,16 @@ export function Header() {
       >
         <div className="mx-auto max-w-7xl flex items-center justify-between h-[72px] px-4 sm:px-6 lg:px-8">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group shrink-0">
-            <div className="w-9 h-9 rounded-lg bg-[#108A00] flex items-center justify-center">
-              <span className="text-white font-bold text-lg leading-none">I</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-[#0A192F] dark:text-white font-bold text-lg tracking-tight leading-tight group-hover:text-[#108A00] transition-colors">
-                Invictus
-              </span>
-              <span className="text-[10px] text-gray-400 dark:text-gray-500 uppercase tracking-[0.2em] leading-none font-medium hidden sm:block">
-                Engineering
-              </span>
-            </div>
+          <Link href="/" className="flex items-center shrink-0 group">
+            <Image
+              src="/Photo/LOGO.png"
+              alt="Invictus Engineering"
+              width={160}
+              height={48}
+              className="h-10 w-auto object-contain dark:invert transition-opacity duration-200 group-hover:opacity-80"
+              priority
+              unoptimized
+            />
           </Link>
 
           {/* Desktop Nav */}

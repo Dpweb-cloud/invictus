@@ -1,10 +1,25 @@
 "use client";
+import { useState } from "react";
 
 import Link from "next/link";
 import { ArrowRight, Settings, Users, PenTool, BookOpen, Globe, ChevronRight, CheckCircle2, Zap, Shield, Target, Award, Clock, MapPin } from "lucide-react";
 import { projects, clients } from "@/lib/data";
 import { motion } from "framer-motion";
 import Image from "next/image";
+
+const clientLogos = [
+  { name: "ONGC",          logo: "/Photo/Client Logos/ONGC.png" },
+  { name: "EIL",           logo: "/Photo/Client Logos/EIL2.png" },
+  { name: "PRAJ",          logo: "/Photo/Client Logos/PRAJ.jpg" },
+  { name: "thyssenkrupp",  logo: "/Photo/Client Logos/thyssenkrupp_logo.png" },
+  { name: "Sopan",         logo: "/Photo/Client Logos/Sopan.png" },
+  { name: "Fenix",         logo: "/Photo/Client Logos/fenix1.png" },
+  { name: "BPCL",          logo: "/Photo/Client Logos/BPCL.jpg" },
+  { name: "FlareTec",      logo: "/Photo/Client Logos/FlareTec.jpg" },
+  { name: "Reliance",      logo: "/Photo/Client Logos/RIL.jpg" },
+  { name: "SUEZ",          logo: "/Photo/Client Logos/suez.png" },
+  { name: "Tooltech",      logo: "/Photo/Client Logos/Tooltech.jpg" },
+];
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -74,6 +89,203 @@ const steps = [
     desc: "Receive construction-ready drawings, 3D models, and documentation — on time, within budget, and to the highest quality.",
   },
 ];
+
+// ─── 3D Modelling Tabs ────────────────────────────────────────────────────────
+const modellingTabs = [
+  {
+    id: "pdms",
+    label: "PDMS / AVEVA",
+    tool: "AVEVA Plant",
+    desc: "Full plant 3D modelling with piping, structural & equipment layout in AVEVA PDMS for complex process plant projects.",
+    images: [
+      { src: "/Photo/3D Model in PDMS View 1.jpg", caption: "PDMS — Full Plant Isometric View (FENIX Project)" },
+      { src: "/Photo/Snap1.png",                    caption: "PDMS — Detailed Piping & Structural Layout" },
+      { src: "/Photo/Snap2.png",                    caption: "PDMS — Multi-Level Plant Structure" },
+    ],
+  },
+  {
+    id: "navisworks",
+    label: "Navisworks",
+    tool: "Autodesk Navisworks",
+    desc: "High-fidelity 3D clash detection and model review using Autodesk Navisworks for construction-ready deliverables.",
+    images: [
+      { src: "/Photo/D1438.jpg",      caption: "Navisworks — 3D Model Review (D1438 Project)" },
+      { src: "/Photo/Snap3.png",      caption: "PDMS — Piping Clash & Clearance Review" },
+    ],
+  },
+  {
+    id: "solidworks",
+    label: "SolidWorks",
+    tool: "SolidWorks",
+    desc: "Precision skid and equipment 3D modelling in SolidWorks delivering fabrication-ready assemblies.",
+    images: [
+      { src: "/Photo/2026 SYSTEM1.png", caption: "SolidWorks — Skid System 1 (2026 Project)" },
+    ],
+  },
+  {
+    id: "caesar",
+    label: "Caesar II",
+    tool: "Intergraph Caesar II",
+    desc: "Pipe stress analysis modelling and support optimization using Caesar II to ASME B31.3 / B31.1 codes.",
+    images: [
+      { src: "/Photo/Caesar Snap.jpg",         caption: "Caesar II — Piping Stress Model" },
+      { src: "/Photo/Caesar Snap3_edited.jpg", caption: "Caesar II — Support & Load Analysis" },
+    ],
+  },
+];
+
+function Modelling3DSection() {
+  const [activeTab, setActiveTab] = useState(0);
+  const [activeImg, setActiveImg] = useState(0);
+
+  const tab = modellingTabs[activeTab];
+
+  function switchTab(idx: number) {
+    setActiveTab(idx);
+    setActiveImg(0);
+  }
+
+  return (
+    <section className="bg-[#060D1A] py-20 lg:py-28 relative overflow-hidden">
+      {/* Ambient glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] rounded-full bg-[#108A00]/8 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[300px] rounded-full bg-[#0A192F]/60 blur-[80px] pointer-events-none" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <motion.div
+          className="text-center max-w-2xl mx-auto mb-12"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
+        >
+          <motion.p variants={fadeIn} className="text-sm font-semibold text-[#108A00] uppercase tracking-widest mb-3">
+            3D Plant Modelling
+          </motion.p>
+          <motion.h2 variants={fadeIn} custom={1} className="text-3xl sm:text-4xl lg:text-5xl font-heading text-white tracking-tight mb-4">
+            Live models,{" "}
+            <span className="text-[#4ADE80] italic">built with precision</span>
+          </motion.h2>
+          <motion.p variants={fadeIn} custom={2} className="text-lg text-gray-400">
+            From PDMS piping layouts to Caesar II stress analysis — see our real project models across every major engineering tool.
+          </motion.p>
+        </motion.div>
+
+        {/* Tab pills */}
+        <div className="flex flex-wrap justify-center gap-3 mb-10">
+          {modellingTabs.map((t, idx) => (
+            <button
+              key={t.id}
+              onClick={() => switchTab(idx)}
+              className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 border ${
+                activeTab === idx
+                  ? "bg-[#108A00] border-[#108A00] text-white shadow-lg shadow-[#108A00]/30"
+                  : "bg-white/5 border-white/10 text-gray-400 hover:border-[#108A00]/40 hover:text-white"
+              }`}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Main content — image + description side by side */}
+        <motion.div
+          key={activeTab}
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start"
+        >
+          {/* Image viewer — takes 3/5 width */}
+          <div className="lg:col-span-3 flex flex-col gap-4">
+            {/* Big image */}
+            <div className="relative rounded-2xl overflow-hidden bg-[#0A192F] border border-white/10 shadow-2xl" style={{ aspectRatio: '16/9' }}>
+              <motion.div
+                key={activeImg}
+                initial={{ opacity: 0, scale: 1.03 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.35 }}
+                className="absolute inset-0"
+              >
+                <Image
+                  src={tab.images[activeImg].src}
+                  alt={tab.images[activeImg].caption}
+                  fill
+                  className="object-contain"
+                  unoptimized
+                />
+              </motion.div>
+              {/* Caption bar */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-5 py-4">
+                <p className="text-white text-xs font-semibold tracking-wide">{tab.images[activeImg].caption}</p>
+              </div>
+              {/* Tool badge */}
+              <div className="absolute top-4 left-4 bg-[#108A00]/90 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                {tab.tool}
+              </div>
+            </div>
+
+            {/* Thumbnail strip (only if >1 image) */}
+            {tab.images.length > 1 && (
+              <div className="flex gap-3">
+                {tab.images.map((img, iIdx) => (
+                  <button
+                    key={iIdx}
+                    onClick={() => setActiveImg(iIdx)}
+                    className={`relative rounded-xl overflow-hidden border-2 transition-all duration-200 flex-shrink-0 ${
+                      activeImg === iIdx ? "border-[#108A00] shadow-lg shadow-[#108A00]/30" : "border-white/10 opacity-60 hover:opacity-90"
+                    }`}
+                    style={{ width: 100, height: 60 }}
+                  >
+                    <Image src={img.src} alt={img.caption} fill className="object-cover" unoptimized />
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Description — takes 2/5 width */}
+          <div className="lg:col-span-2 flex flex-col justify-center gap-6 py-4">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#108A00]/15 border border-[#108A00]/30 mb-4">
+                <span className="w-2 h-2 rounded-full bg-[#4ADE80] animate-pulse" />
+                <span className="text-[#4ADE80] text-xs font-bold uppercase tracking-wider">Real Project Models</span>
+              </div>
+              <h3 className="text-2xl font-heading font-bold text-white mb-3">{tab.label} Modelling</h3>
+              <p className="text-gray-400 leading-relaxed text-base">{tab.desc}</p>
+            </div>
+
+            {/* Feature bullets */}
+            <ul className="space-y-3">
+              {[
+                "Construction-ready 3D deliverables",
+                "Clash detection & clearance checks",
+                "International code compliance",
+                "Isometric & GA drawing extraction",
+              ].map((feat) => (
+                <li key={feat} className="flex items-start gap-3 text-sm text-gray-300">
+                  <span className="mt-1 flex-shrink-0 w-4 h-4 rounded-full bg-[#108A00]/20 border border-[#108A00]/40 flex items-center justify-center">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#4ADE80]" />
+                  </span>
+                  {feat}
+                </li>
+              ))}
+            </ul>
+
+            <Link
+              href="/services/detail-engineering"
+              className="inline-flex items-center self-start text-sm font-semibold text-[#4ADE80] hover:text-white transition-colors group mt-2"
+            >
+              Explore detail engineering
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
 
 export default function Home() {
   const featuredProjects = projects.slice(0, 3);
@@ -168,15 +380,20 @@ export default function Home() {
         <div className="relative">
           <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-gray-50 dark:from-[#0A192F]/50 to-transparent z-10" />
           <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-gray-50 dark:from-[#0A192F]/50 to-transparent z-10" />
-          <div className="flex animate-marquee">
-            {[...clients, ...clients].map((client, idx) => (
+          <div className="flex animate-marquee items-center">
+            {[...clientLogos, ...clientLogos].map((client, idx) => (
               <div
                 key={`${client.name}-${idx}`}
-                className="flex-shrink-0 mx-8 flex items-center justify-center"
+                className="flex-shrink-0 mx-10 flex items-center justify-center h-16"
               >
-                <span className="text-lg font-bold text-gray-300 dark:text-gray-600 hover:text-[#0A192F] dark:hover:text-white transition-colors duration-300 whitespace-nowrap tracking-wide">
-                  {client.name}
-                </span>
+                <Image
+                  src={client.logo}
+                  alt={client.name}
+                  width={120}
+                  height={56}
+                  className="object-contain max-h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
+                  unoptimized
+                />
               </div>
             ))}
           </div>
@@ -240,6 +457,14 @@ export default function Home() {
 
       {/* ===== SECTION 4: WHY CHOOSE INVICTUS — Stats ===== */}
       <section className="bg-[#0A192F] dark:bg-[#060F1D] py-20 lg:py-28 relative overflow-hidden">
+        {/* Real industrial plant photo background */}
+        <Image
+          src="/Photo/image1.jpg"
+          alt="Industrial plant"
+          fill
+          className="object-cover opacity-10"
+          unoptimized
+        />
         {/* Background decoration */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-[#108A00]/5 blur-[120px]" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#108A00]/5 blur-[100px]" />
@@ -343,6 +568,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ===== SECTION 5B: 3D PLANT MODELLING SHOWCASE ===== */}
+      <Modelling3DSection />
 
       {/* ===== SECTION 6: FEATURED PROJECTS ===== */}
       <section className="bg-gray-50 dark:bg-[#0A192F]/30 py-20 lg:py-28">
