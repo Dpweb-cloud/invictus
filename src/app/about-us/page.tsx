@@ -21,11 +21,17 @@ export default function AboutUsPage() {
         <StaggerWrapper className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <FadeUpBox className="prose prose-lg max-w-none text-gray-700">
             <h2 className="text-3xl font-heading font-bold text-brand-primary-dark mb-6">Who We Are</h2>
-            <p className="mb-6">
-              Invictus Engineering is a premier engineering services provider, specializing in comprehensive plant engineering for greenfield and brownfield projects. Our multi-disciplinary expertise spans Process, Equipment, Piping, Instrumentation, Automation, and Electrical Engineering.
+            <p className="mb-6 leading-relaxed">
+              Invictus Engineering is a premier engineering services provider, specializing in comprehensive plant engineering solutions for greenfield and brownfield projects across the industrial sector for more than a decade. Our multi-disciplinary expertise spans Process, Equipment, Piping, Civil &amp; Structure, Instrumentation, and Electrical Engineering, allowing us to support clients through every phase of a project&apos;s lifecycle &mdash; from concept and feasibility through to detailed design and execution.
             </p>
-            <p className="mb-12">
-              We are committed to delivering precise, cost-effective, and safe engineering solutions that drive the industrial sector forward. From detailed engineering design to rigorous quality assurance, our team of seasoned professionals ensures that every project meets the highest global standards.
+            <p className="mb-6 leading-relaxed">
+              We are committed to delivering precise, cost-effective, and safe engineering solutions that drive operational excellence and long-term reliability for our clients.
+            </p>
+            <p className="mb-6 leading-relaxed">
+              To further strengthen this commitment, we have developed a proprietary, in-house Bill of Material (BOM) processing software capable of handling complex Piping BOM data at both the proposal and execution stages &mdash; enabling faster turnaround, greater accuracy, and stronger, value-driven proposals that improve our clients&apos; competitiveness.
+            </p>
+            <p className="mb-12 leading-relaxed">
+              From detailed engineering design to rigorous quality assurance, our team of seasoned professionals ensures that every deliverable meets the highest global standards of quality, safety, and technical excellence.
             </p>
           </FadeUpBox>
 

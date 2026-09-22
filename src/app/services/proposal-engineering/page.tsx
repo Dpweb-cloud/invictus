@@ -22,11 +22,14 @@ export default function ProposalEngineeringPage() {
         <StaggerWrapper className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <FadeUpBox className="prose prose-lg max-w-none text-gray-700">
             <h2 className="text-3xl font-heading font-bold text-brand-primary-dark mb-6">Winning Starts with Accuracy</h2>
-            <p className="mb-8">
-              At the core of every successful EPC project is a highly accurate, competitively priced proposal. Invictus Engineering provides specialized Proposal Engineering services designed to help you bid with confidence.
+            <p className="mb-6 leading-relaxed">
+              At the core of every successful EPC project lies a proposal built on precision &mdash; one that is technically sound, competitively priced, and delivered without delay. Invictus Engineering&apos;s specialized Proposal Engineering services are designed to give clients exactly that edge, empowering them to bid with confidence and win the projects that matter most.
             </p>
-            <p className="mb-12">
-              We leverage our extensive database and deep industry experience to quickly turn around accurate preliminary designs and Material Take-Offs (MTOs) during the critical bidding phase.
+            <p className="mb-6 leading-relaxed">
+              Drawing on an extensive in-house database and decades of combined industry experience, our team is equipped to rapidly develop accurate preliminary designs and Bill of Materials (BOMs) during the time-sensitive bidding phase &mdash; when speed and precision can make the difference between winning and losing a bid.
+            </p>
+            <p className="mb-12 leading-relaxed">
+              By combining fast turnaround with rigorous technical accuracy, we help clients submit proposals that are not only competitive on cost, but also credible and defensible on scope, ensuring stronger win rates and reduced risk of costly revisions further down the project lifecycle.
             </p>
           </FadeUpBox>
 
@@ -34,15 +37,14 @@ export default function ProposalEngineeringPage() {
             <h3 className="text-2xl font-heading font-bold text-brand-primary-dark mb-6">Our Proposal Deliverables</h3>
             <ul className="space-y-4 mb-12">
               {[
-                "Preliminary Material Take-Offs (MTOs) for Piping and Structural",
-                "Equipment Sizing and Data Sheets for Vendor Quotations",
-                "Plot Plan and Equipment Layout Conceptualization",
-                "Man-hour Estimation for Detail Engineering Phase",
-                "Technical Bid Evaluation (TBE) of Vendor Offers"
+                "Preliminary Bill of Materials (BOMs) for Piping discipline, providing a reliable basis for early-stage cost estimation",
+                "Plot Plan and Equipment Layout Conceptualization, establishing a practical and optimized spatial framework for the proposed facility",
+                "Man-hour Estimation for the Detail Engineering Phase, enabling accurate resourcing and scheduling forecasts",
+                "Technical Bid Evaluation (TBE) of Vendor Offers, ensuring vendor proposals are assessed objectively against technical and commercial criteria"
               ].map((item, idx) => (
                 <li key={idx} className="flex items-start p-4 bg-brand-primary-light rounded-xl border border-gray-100">
-                  <CheckCircle className="h-6 w-6 text-brand-accent mr-4 shrink-0" />
-                  <span className="text-gray-800 font-medium">{item}</span>
+                  <CheckCircle className="h-6 w-6 text-brand-accent mr-4 shrink-0 mt-0.5" />
+                  <span className="text-gray-800 font-medium leading-relaxed">{item}</span>
                 </li>
               ))}
             </ul>

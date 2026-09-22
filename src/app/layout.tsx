@@ -3,6 +3,7 @@ import { Inter, DM_Serif_Display, Geist } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { cn } from "@/lib/utils";
 
 import { ThemeProvider } from "@/components/theme-provider";
@@ -42,6 +43,7 @@ export default function RootLayout({
           <Header />
           <main className="flex-grow">{children}</main>
           <Footer />
+          <WhatsAppButton />
         </ThemeProvider>
       </body>
     </html>

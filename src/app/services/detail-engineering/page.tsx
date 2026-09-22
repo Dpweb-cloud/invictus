@@ -47,11 +47,63 @@ export default function DetailEngineering() {
       <section className="py-24 bg-white flex-grow">
         <StaggerWrapper className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           
+          <FadeUpBox className="prose prose-lg max-w-none text-gray-700 mb-16">
+            <h2 className="text-3xl font-heading font-bold text-brand-primary-dark mb-6">Detail Engineering</h2>
+            <p className="mb-6 leading-relaxed">
+              Comprehensive, multi-disciplinary design and engineering services that translate early-stage concepts into fully construction-ready deliverables. At Invictus Engineering, detail engineering represents the critical bridge between design intent and physical execution &mdash; the stage at which every dimension, specification, and interface must be resolved with absolute precision before a single piece of steel is cut or a pipe is laid.
+            </p>
+            <p className="mb-12 leading-relaxed">
+              Our detail engineering practice is built on decades of combined hands-on experience across greenfield and brownfield projects in the oil &amp; gas, chemical, petrochemical, power, fertilizer, biofuels, and pharmaceutical sectors, and is delivered by a team fluent in the international codes and standards (ASME, API, NFPA, BS, DIN, JIS, IS, IBR, OISD, PED, and others) that govern safe, compliant plant design.
+            </p>
+
+            <div className="bg-brand-primary-light border-l-4 border-brand-accent p-8 rounded-r-2xl my-10 not-prose">
+              <h3 className="text-2xl font-heading font-bold text-brand-primary-dark mb-4">Piping Engineering &mdash; Our Core Strength</h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Piping engineering is where Invictus Engineering truly excels, and it forms the backbone of our in-house technical capability. Our dedicated piping team delivers end-to-end services spanning design basis development, plot plan and equipment layout, piping specifications, stress analysis, comprehensive 3D modelling, pipe rack planning and loading, civil load data coordination, nozzle orientation, MTO estimation, isometrics, and piping general arrangement (GA) drawings.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Leveraging industry-leading tools such as AutoCAD, Aveva 3D modelling platforms, and Caesar II &mdash; together with our own proprietary in-house BOM processing software &mdash; we produce fully coordinated, clash-free, and execution-ready piping deliverables that minimize field rework, reduce project risk, and keep schedules on track. With engineers experienced from trainee to expert level, piping engineering is the discipline our clients rely on us for most.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 p-8 rounded-2xl my-10 shadow-sm not-prose">
+              <h3 className="text-2xl font-heading font-bold text-brand-primary-dark mb-3">Supported Through Our Associate Network</h3>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                For the following disciplines, Invictus Engineering draws on a trusted network of experienced cross-functional associate professionals, ensuring clients receive fully integrated, multi-disciplinary engineering support without compromise:
+              </p>
+              <ul className="space-y-4 mb-6">
+                <li className="flex items-start">
+                  <CheckCircle2 className="h-5 w-5 text-brand-accent mr-3 mt-0.5 shrink-0" />
+                  <div>
+                    <span className="font-bold text-brand-primary-dark">Process Engineering &mdash; </span>
+                    <span className="text-gray-700">process flow diagrams (PFDs), P&amp;IDs, and mass/energy balances</span>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle2 className="h-5 w-5 text-brand-accent mr-3 mt-0.5 shrink-0" />
+                  <div>
+                    <span className="font-bold text-brand-primary-dark">Equipment Engineering &mdash; </span>
+                    <span className="text-gray-700">equipment specification, sizing, and vendor drawing coordination</span>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle2 className="h-5 w-5 text-brand-accent mr-3 mt-0.5 shrink-0" />
+                  <div>
+                    <span className="font-bold text-brand-primary-dark">Instrumentation &amp; Electrical Engineering &mdash; </span>
+                    <span className="text-gray-700">instrumentation datasheets, control philosophy, and electrical distribution design</span>
+                  </div>
+                </li>
+              </ul>
+              <p className="text-gray-600 italic text-sm border-t border-gray-100 pt-4">
+                This model lets us stay focused on doing what we do best &mdash; piping &mdash; while still offering clients a single point of accountability for the full engineering scope.
+              </p>
+            </div>
+          </FadeUpBox>
+
           <FadeUpBox className="mb-12">
-            <h2 className="text-3xl font-heading font-bold text-brand-primary-dark mb-6">Engineering Capabilities</h2>
+            <h2 className="text-3xl font-heading font-bold text-brand-primary-dark mb-4">Engineering Capabilities &amp; Deliverables</h2>
             <p className="text-lg text-gray-600 max-w-3xl leading-relaxed mb-8">
-              We provide full-spectrum detail engineering services covering all major disciplines. 
-              Expand the sections below to view our specific deliverables and capabilities within each discipline.
+              Expand the sections below to view detailed breakdown of deliverables across each engineering discipline.
             </p>
           </FadeUpBox>
 

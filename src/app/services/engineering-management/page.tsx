@@ -21,29 +21,61 @@ export default function EngineeringManagementPage() {
       <section className="py-24 bg-white">
         <StaggerWrapper className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <FadeUpBox className="prose prose-lg max-w-none text-gray-700">
-            <h2 className="text-3xl font-heading font-bold text-brand-primary-dark mb-6">Orchestrating Complex Projects</h2>
-            <p className="mb-8">
-              Large scale industrial projects require meticulous coordination between multiple engineering disciplines, vendors, and construction teams. Our Engineering Management service provides the leadership needed to keep projects on track.
+            <h2 className="text-3xl font-heading font-bold text-brand-primary-dark mb-6">Orchestrating Complex Projects with Engineering Excellence</h2>
+            <p className="mb-6 leading-relaxed">
+              Large-scale industrial projects demand more than technical expertise &mdash; they require disciplined coordination, clear communication, and strong engineering leadership across every stage of project execution. Our Engineering Management services provide the integrated oversight needed to align multidisciplinary teams, control technical interfaces, and keep projects progressing safely, efficiently, and in accordance with defined objectives.
             </p>
-            <p className="mb-12">
-              We act as the central hub of technical communication, resolving clashes, managing vendor data, and ensuring that the design intent is perfectly translated into the final constructed facility.
+            <p className="mb-6 leading-relaxed">
+              We serve as the central coordination hub between engineering disciplines, clients, vendors, contractors, and construction teams. By managing technical interfaces, reviewing engineering deliverables, resolving design conflicts, and monitoring project progress, we help ensure that the original design intent is effectively translated into a constructible, compliant, and high-quality facility.
+            </p>
+            <p className="mb-12 leading-relaxed">
+              Our approach combines engineering expertise with structured project coordination to identify potential issues early, minimize rework, streamline decision-making, and maintain alignment between engineering, procurement, and construction activities.
             </p>
           </FadeUpBox>
 
           <FadeUpBox>
-            <h3 className="text-2xl font-heading font-bold text-brand-primary-dark mb-6">Management Capabilities</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
+            <h3 className="text-2xl font-heading font-bold text-brand-primary-dark mb-6">Key Engineering Management Capabilities</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
               {[
-                "Multi-disciplinary Design Coordination",
-                "Vendor Document Review & Approval (VDR)",
-                "3D Model Reviews (30%, 60%, 90%)",
-                "Constructability Reviews",
-                "Change Management & Impact Analysis",
-                "Schedule & Deliverable Tracking"
+                {
+                  title: "Multi-Disciplinary Design Coordination",
+                  desc: "Integrating civil, structural, mechanical, piping, electrical, instrumentation, and other engineering disciplines to ensure seamless interfaces and coordinated design development."
+                },
+                {
+                  title: "Vendor Document Review & Approval (VDR)",
+                  desc: "Managing the review, coordination, and approval of vendor drawings, technical documents, and engineering data to ensure compliance with project specifications and design requirements."
+                },
+                {
+                  title: "3D Model Reviews \u2013 30%, 60% & 90%",
+                  desc: "Conducting structured model reviews at key design milestones to identify spatial conflicts, interface issues, accessibility concerns, and potential constructability challenges before construction."
+                },
+                {
+                  title: "Constructability Reviews",
+                  desc: "Evaluating designs from a construction and installation perspective to improve practicality, accessibility, sequencing, safety, and overall execution efficiency."
+                },
+                {
+                  title: "Change Management & Impact Analysis",
+                  desc: "Assessing technical and project impacts arising from design changes, scope modifications, and field requirements while maintaining alignment across affected disciplines and stakeholders."
+                },
+                {
+                  title: "Schedule & Deliverable Tracking",
+                  desc: "Monitoring engineering deliverables, review cycles, key milestones, and discipline-wise progress to support timely decision-making and maintain project schedules."
+                },
+                {
+                  title: "Technical Interface Management",
+                  desc: "Identifying and managing interfaces between engineering disciplines, vendors, contractors, and project stakeholders to minimize gaps, overlaps, and coordination-related delays."
+                },
+                {
+                  title: "Design Quality & Compliance Assurance",
+                  desc: "Supporting consistency and technical quality across engineering deliverables while ensuring alignment with applicable project standards, specifications, codes, and client requirements."
+                }
               ].map((item, idx) => (
-                <div key={idx} className="flex items-center p-4 bg-brand-primary-light rounded-xl border border-gray-100">
-                  <CheckCircle className="h-5 w-5 text-brand-accent mr-3 shrink-0" />
-                  <span className="text-gray-800 font-bold">{item}</span>
+                <div key={idx} className="p-6 bg-brand-primary-light rounded-2xl border border-gray-100 flex items-start">
+                  <CheckCircle className="h-6 w-6 text-brand-accent mr-4 shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-lg text-brand-primary-dark mb-2">{item.title}</h4>
+                    <p className="text-gray-700 text-sm leading-relaxed">{item.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
