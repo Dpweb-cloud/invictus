@@ -1,39 +1,44 @@
-import Link from "next/link";
 import { projects } from "@/lib/data";
-import { ArrowRight, Globe } from "lucide-react";
+import { SubpageBanner } from "@/components/ui/SubpageBanner";
+import { ProjectCard } from "@/components/ui/ProjectCard";
 import { StaggerWrapper, FadeUpBox } from "@/components/ui/Animations";
+
+export const metadata = {
+  title: "Engineering Projects & Case Studies | Invictus Engineering",
+  description:
+    "Explore our featured plant engineering, 3D piping layout, stress analysis, and grassroot facility projects delivered for global EPC leaders.",
+};
 
 export default function ProjectsPage() {
   return (
-    <div className="flex flex-col bg-background">
-      <section className="bg-brand-primary pt-20 pb-24 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay"></div>
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl font-heading font-extrabold tracking-tight mb-6">Our Projects</h1>
-          <p className="text-xl text-brand-primary-light max-w-2xl mx-auto font-light">
-            A showcase of our engineering precision across diverse industrial sectors.
-          </p>
-        </div>
-      </section>
+    <div className="flex flex-col bg-background min-h-screen">
+      {/* Subpage Banner */}
+      <SubpageBanner
+        badge="ENGINEERING PORTFOLIO"
+        title="Our Industrial Projects"
+        subtitle="Explore our proven track record of grassroot engineering design, complex piping stress analysis, 3D plant modelling, and turnkey facility solutions."
+        breadcrumbs={[{ label: "Projects" }]}
+        bgImage="/images/banners/projects-banner.png"
+      />
 
-      <section className="py-24 bg-brand-primary-light/50">
+      {/* Projects Grid Section */}
+      <section className="py-16 md:py-24 bg-gray-50/50 dark:bg-[#060D1A]/50 relative">
         <StaggerWrapper className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <h2 className="text-2xl sm:text-3xl font-heading font-extrabold text-[#0A192F] dark:text-white mb-4">
+              Featured Case Studies &amp; Engineering Deliverables
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 text-base">
+              From high-pressure steam lines in the UK &amp; India to offshore gas conditioning skids in Saudi Arabia, view our detailed project scope and technical execution.
+            </p>
+          </div>
+
+          {/* Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, idx) => (
-              <FadeUpBox key={project.slug} delay={idx * 0.1}>
-                <Link href={`/projects/${project.slug}`} className="group flex flex-col bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 h-full hover:-translate-y-2">
-                  <div className="h-48 bg-brand-primary-light flex items-center justify-center p-6 text-center group-hover:bg-brand-primary-dark transition-colors duration-300">
-                    <span className="text-brand-primary-dark font-bold text-xl group-hover:text-white transition-colors">{project.title}</span>
-                  </div>
-                  <div className="p-8 flex-grow flex flex-col">
-                    <span className="inline-block px-3 py-1 bg-brand-accent/10 text-brand-accent-dark text-xs font-bold rounded-full mb-4 w-max">{project.sector}</span>
-                    <h3 className="text-xl font-bold mb-3 text-brand-primary-dark">{project.title}</h3>
-                    <p className="text-sm text-gray-500 mb-6 flex items-center gap-2 font-medium"><Globe className="w-4 h-4 text-brand-accent" /> {project.location}</p>
-                    <div className="mt-auto inline-flex items-center text-sm font-bold text-brand-primary group-hover:text-brand-accent transition-colors">
-                      Read Case Study <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </div>
-                </Link>
+              <FadeUpBox key={project.slug} delay={idx * 0.08}>
+                <ProjectCard project={project} />
               </FadeUpBox>
             ))}
           </div>

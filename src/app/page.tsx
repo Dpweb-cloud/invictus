@@ -6,18 +6,21 @@ import { ArrowRight, Settings, Users, PenTool, BookOpen, Globe, ChevronRight, Ch
 import { projects, clients } from "@/lib/data";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { ProjectCard } from "@/components/ui/ProjectCard";
 
 const clientLogos = [
   { name: "ONGC",          logo: "/Photo/Client Logos/ONGC.png" },
+  { name: "BPCL",          logo: "/Photo/Client Logos/BPCL.jpg" },
+  { name: "Bilt Graphic Paper Products", logo: "/images/clients/new-client-logo.png" },
   { name: "EIL",           logo: "/Photo/Client Logos/EIL2.png" },
   { name: "PRAJ",          logo: "/Photo/Client Logos/PRAJ.jpg" },
   { name: "thyssenkrupp",  logo: "/Photo/Client Logos/thyssenkrupp_logo.png" },
   { name: "Sopan",         logo: "/Photo/Client Logos/Sopan.png" },
   { name: "Fenix",         logo: "/Photo/Client Logos/fenix1.png" },
-  { name: "BPCL",          logo: "/Photo/Client Logos/BPCL.jpg" },
   { name: "FlareTec",      logo: "/Photo/Client Logos/FlareTec.jpg" },
   { name: "Reliance",      logo: "/Photo/Client Logos/RIL.jpg" },
   { name: "SUEZ",          logo: "/Photo/Client Logos/suez.png" },
+  { name: "PGI",           logo: "/Photo/Client Logos/PGI1.jpg" },
   { name: "Tooltech",      logo: "/Photo/Client Logos/Tooltech.jpg" },
 ];
 
@@ -111,15 +114,6 @@ const modellingTabs = [
     images: [
       { src: "/Photo/D1438.jpg",      caption: "Navisworks — 3D Model Review (D1438 Project)" },
       { src: "/Photo/Snap3.png",      caption: "PDMS — Piping Clash & Clearance Review" },
-    ],
-  },
-  {
-    id: "solidworks",
-    label: "SolidWorks",
-    tool: "SolidWorks",
-    desc: "Precision skid and equipment 3D modelling in SolidWorks delivering fabrication-ready assemblies.",
-    images: [
-      { src: "/Photo/2026 SYSTEM1.png", caption: "SolidWorks — Skid System 1 (2026 Project)" },
     ],
   },
   {
@@ -610,33 +604,9 @@ export default function Home() {
                 viewport={{ once: true, amount: 0.2 }}
                 variants={fadeIn}
                 custom={idx}
+                className="h-full"
               >
-                <Link
-                  href={`/projects/${project.slug}`}
-                  className="group flex flex-col h-full bg-white dark:bg-white/5 rounded-2xl overflow-hidden border border-gray-100 dark:border-white/10 hover:border-[#108A00]/30 hover:shadow-xl hover:shadow-[#108A00]/5 transition-all duration-300"
-                >
-                  {/* Card Header */}
-                  <div className="h-44 bg-gradient-to-br from-[#0A192F] to-[#0A192F]/80 flex items-center justify-center p-6 relative overflow-hidden">
-                    <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, #108A00 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
-                    <span className="text-white font-bold text-xl relative z-10 text-center">{project.title}</span>
-                  </div>
-                  {/* Card Body */}
-                  <div className="p-6 flex-grow flex flex-col">
-                    <span className="inline-block px-3 py-1 bg-[#108A00]/10 text-[#108A00] text-[10px] font-bold rounded-full mb-3 w-max uppercase tracking-wider">
-                      {project.sector}
-                    </span>
-                    <h3 className="text-lg font-bold text-[#0A192F] dark:text-white mb-2 group-hover:text-[#108A00] transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 mb-4 flex items-center gap-2 font-medium">
-                      <MapPin className="w-3.5 h-3.5 text-[#108A00]" />
-                      {project.location}
-                    </p>
-                    <div className="mt-auto inline-flex items-center text-sm font-semibold text-[#108A00] group-hover:gap-2 transition-all">
-                      Read case study <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </div>
-                </Link>
+                <ProjectCard project={project} />
               </motion.div>
             ))}
           </div>
