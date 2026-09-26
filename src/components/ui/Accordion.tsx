@@ -5,8 +5,8 @@ import { ChevronDown } from "lucide-react";
 
 import { motion, AnimatePresence } from "framer-motion";
 
-export function Accordion({ title, children }: { title: string, children: React.ReactNode }) {
-  const [isOpen, setIsOpen] = useState(false);
+export function Accordion({ title, children, defaultOpen = false }: { title: string, children: React.ReactNode, defaultOpen?: boolean }) {
+  const [isOpen, setIsOpen] = useState(defaultOpen);
 
   return (
     <div className="border border-gray-200 rounded-xl bg-white overflow-hidden mb-4 shadow-sm hover:border-gray-300 transition-colors">

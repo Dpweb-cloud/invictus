@@ -46,10 +46,10 @@ export default function QualityPage() {
         bgImage="/images/banners/quality-banner.png"
       />
 
-      <section className="py-16 md:py-24 bg-white dark:bg-[#0A0E14]">
+      <section className="py-16 md:py-24 bg-white dark:bg-[#04101C]">
         <StaggerWrapper className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <FadeUpBox className="text-center mb-16 max-w-3xl mx-auto">
-            <h2 className="text-3xl font-heading font-extrabold text-[#0A192F] dark:text-white mb-4">
+            <h2 className="text-3xl font-heading font-bold text-[#071A2B] dark:text-white mb-4">
               The 5 Pillars of Invictus Quality
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300">
@@ -60,10 +60,10 @@ export default function QualityPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {pillars.map((pillar, idx) => (
               <FadeUpBox key={idx} className="bg-gray-50 dark:bg-white/5 rounded-3xl p-8 border border-gray-200/70 dark:border-white/10 hover:-translate-y-1 hover:border-[#108A00] hover:shadow-xl transition-all duration-300">
-                <div className="w-12 h-12 bg-[#0A192F] rounded-2xl flex items-center justify-center text-[#4ADE80] mb-6 shadow-md">
+                <div className="w-12 h-12 bg-[#071A2B] rounded-2xl flex items-center justify-center text-[#108A00] mb-6 shadow-md border border-[#0B5CAD]/30">
                   <pillar.icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold text-[#0A192F] dark:text-white mb-3">{pillar.title}</h3>
+                <h3 className="text-xl font-bold text-[#071A2B] dark:text-white mb-3">{pillar.title}</h3>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">{pillar.desc}</p>
               </FadeUpBox>
             ))}

@@ -217,9 +217,8 @@ export const projects: Project[] = [
 
 export const clients = [
   { name: "ONGC", logo: "/Photo/Client Logos/ONGC.png", testimonialQuote: "Exceptional engineering support for our critical projects.", testimonialAuthor: "Engineering Director" },
-  { name: "BPCL", logo: "/Photo/Client Logos/BPCL.jpg", testimonialQuote: "Delivered fire water and jetty piping engineering with top-notch accuracy.", testimonialAuthor: "Senior Project Lead" },
+  { name: "BPCL", logo: "/Photo/Client Logos/Bharat_Petroleum-Logo.wine.png", testimonialQuote: "Delivered fire water and jetty piping engineering with top-notch accuracy.", testimonialAuthor: "Senior Project Lead" },
   { name: "Bilt Graphic Paper Products Ltd.", logo: "/images/clients/new-client-logo.png", testimonialQuote: "Flawless stress analysis and tie-in engineering for our LP steam line within tight shutdown windows.", testimonialAuthor: "Plant Operations Lead" },
-  { name: "Sun Pharma", logo: "/Photo/Client Logos/Suez.png", testimonialQuote: "High quality detail engineering and 3D modeling for our chemical expansion.", testimonialAuthor: "Engineering Head" },
   { name: "EIL", logo: "/Photo/Client Logos/EIL2.png", testimonialQuote: "Reliable and technically sound detail engineering partner.", testimonialAuthor: "Project Manager" },
   { name: "PRAJ", logo: "/Photo/Client Logos/PRAJ.jpg", testimonialQuote: "Delivered our piping layout and 3D modeling on schedule.", testimonialAuthor: "Lead Engineer" },
   { name: "thyssenkrupp", logo: "/Photo/Client Logos/thyssenkrupp_logo.png", testimonialQuote: "A highly capable team for stress analysis and design.", testimonialAuthor: "Technical Lead" },
@@ -229,7 +228,7 @@ export const clients = [
   { name: "Reliance Industries", logo: "/Photo/Client Logos/RIL.jpg" },
   { name: "SUEZ", logo: "/Photo/Client Logos/suez.png" },
   { name: "PGI (Process Group International)", logo: "/Photo/Client Logos/PGI1.jpg" },
-  { name: "Integraheat Ltd.", logo: "/Photo/Client Logos/PGI1.jpg" },
+  { name: "Integraheat Ltd. / IFAB", logo: "/Photo/Client Logos/ifab.png" },
   { name: "Tooltech", logo: "/Photo/Client Logos/Tooltech.jpg" },
   { name: "Kamal Oil", logo: "/Photo/Client Logos/kamal oil.jpg" },
   { name: "Willbo", logo: "/Photo/Client Logos/Willbo.png" },

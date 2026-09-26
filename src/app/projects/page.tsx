@@ -26,7 +26,7 @@ export default function ProjectsPage() {
         <StaggerWrapper className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <h2 className="text-2xl sm:text-3xl font-heading font-extrabold text-[#0A192F] dark:text-white mb-4">
+            <h2 className="text-2xl sm:text-3xl font-heading font-bold text-[#071A2B] dark:text-white mb-4">
               Featured Case Studies &amp; Engineering Deliverables
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-base">

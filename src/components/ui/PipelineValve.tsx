@@ -100,7 +100,7 @@ export function PipelineValve({ title, children, color = "teal", defaultOpen = f
           style={{ backgroundColor: isOpen ? activeColor.light : '#ffffff' }}
           onClick={() => setIsOpen(!isOpen)}
         >
-          <div className="text-2xl md:text-3xl font-heading font-extrabold text-gray-900">
+          <div className="text-2xl md:text-3xl font-heading font-bold text-gray-900">
             {title}
           </div>
           <motion.div 

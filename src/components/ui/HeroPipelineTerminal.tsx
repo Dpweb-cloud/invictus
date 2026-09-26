@@ -44,7 +44,7 @@ export function HeroPipelineTerminal() {
           <rect x="155" y="270" width="90" height="90" rx="8" fill="#1E293B" />
           <rect x="165" y="280" width="70" height="30" rx="4" fill="#334155" />
           <circle cx="185" cy="295" r="6" fill="#10B981" />
-          <circle cx="205" cy="295" r="6" fill="#F59E0B" />
+          <circle cx="205" cy="295" r="6" fill="#108A00" />
           <circle cx="225" cy="295" r="6" fill="#3B82F6" />
           
           {/* Ventilation Louvers */}
@@ -97,7 +97,7 @@ export function HeroPipelineTerminal() {
         {/* ROUTE 1: Amber Inlet Gas Line (Inlet Separator -> Compressor Skid) */}
         <g>
           <path d="M 78 135 L 78 70 L 200 70 L 200 270" stroke="#B45309" strokeWidth="14" strokeLinejoin="round" strokeLinecap="round" />
-          <path d="M 78 135 L 78 70 L 200 70 L 200 270" stroke="#F59E0B" strokeWidth="10" strokeLinejoin="round" strokeLinecap="round" />
+          <path d="M 78 135 L 78 70 L 200 70 L 200 270" stroke="#108A00" strokeWidth="10" strokeLinejoin="round" strokeLinecap="round" />
           
           {/* Valve Control */}
           <rect x="125" y="60" width="28" height="20" rx="4" fill="#1E293B" />

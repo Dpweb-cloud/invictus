@@ -21,7 +21,7 @@ export default function AboutUsPage() {
       <section className="py-16 md:py-24 bg-white dark:bg-[#0A0E14]">
         <StaggerWrapper className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <FadeUpBox className="prose prose-lg dark:prose-invert max-w-none text-gray-700 dark:text-gray-300">
-            <h2 className="text-3xl font-heading font-extrabold text-[#0A192F] dark:text-white mb-6">
+            <h2 className="text-3xl font-heading font-bold text-[#071A2B] dark:text-white mb-6">
               Premier Engineering Solutions Provider
             </h2>
             <p className="mb-6 leading-relaxed text-lg">
@@ -41,10 +41,10 @@ export default function AboutUsPage() {
           <FadeUpBox className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             <div className="bg-gray-50 dark:bg-white/5 p-8 rounded-3xl border border-gray-200/70 dark:border-white/10 hover:shadow-xl transition-shadow">
               <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 bg-[#0A192F] text-white rounded-2xl">
-                  <Eye className="w-6 h-6 text-[#4ADE80]" />
+                <div className="p-3 bg-[#071A2B] text-white rounded-2xl">
+                  <Eye className="w-6 h-6 text-[#108A00]" />
                 </div>
-                <h3 className="text-2xl font-bold text-[#0A192F] dark:text-white m-0">Our Vision</h3>
+                <h3 className="text-2xl font-bold text-[#071A2B] dark:text-white m-0">Our Vision</h3>
               </div>
               <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
                 To be the globally preferred engineering partner, recognized for our unwavering commitment to quality, innovation, and sustainable design solutions.
@@ -56,7 +56,7 @@ export default function AboutUsPage() {
                 <div className="p-3 bg-[#108A00] text-white rounded-2xl">
                   <Target className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold text-[#0A192F] dark:text-white m-0">Our Mission</h3>
+                <h3 className="text-2xl font-bold text-[#071A2B] dark:text-white m-0">Our Mission</h3>
               </div>
               <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
                 To provide safe, efficient, and highly optimized engineering designs that exceed client expectations, ensuring on-time delivery without compromising on rigorous quality standards.
@@ -65,7 +65,7 @@ export default function AboutUsPage() {
           </FadeUpBox>
 
           <FadeUpBox>
-            <h2 className="text-3xl font-heading font-bold text-[#0A192F] dark:text-white mb-8 text-center">
+            <h2 className="text-3xl font-heading font-bold text-[#071A2B] dark:text-white mb-8 text-center">
               Our Core Values
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -75,8 +75,8 @@ export default function AboutUsPage() {
                 { title: "Innovation", desc: "Proprietary BOM tools and modern 3D digital workflows", icon: Target },
               ].map((val, idx) => (
                 <div key={idx} className="flex flex-col items-center text-center p-8 bg-white dark:bg-white/5 border border-gray-200/70 dark:border-white/10 rounded-2xl hover:border-[#108A00] transition-colors shadow-sm">
-                  <val.icon className="w-8 h-8 text-[#108A00] dark:text-[#4ADE80] mb-4" />
-                  <h4 className="font-bold text-lg text-[#0A192F] dark:text-white mb-2">{val.title}</h4>
+                  <val.icon className="w-8 h-8 text-[#108A00] dark:text-[#108A00] mb-4" />
+                  <h4 className="font-bold text-lg text-[#071A2B] dark:text-white mb-2">{val.title}</h4>
                   <p className="text-xs text-gray-500 dark:text-gray-400">{val.desc}</p>
                 </div>
               ))}

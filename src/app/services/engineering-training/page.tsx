@@ -22,17 +22,17 @@ export default function EngineeringTrainingPage() {
         ]}
       />
 
-      <section className="py-16 md:py-24 bg-white dark:bg-[#0A0E14]">
+      <section className="py-16 md:py-24 bg-white dark:bg-[#04101C]">
         <StaggerWrapper className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <FadeUpBox className="prose prose-lg dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 mb-12">
-            <h2 className="text-3xl font-heading font-extrabold text-[#0A192F] dark:text-white mb-6">
+            <h2 className="text-3xl font-heading font-bold text-[#071A2B] dark:text-white mb-6">
               Bridging the Gap Between Academia &amp; Industry
             </h2>
             <p className="mb-6 leading-relaxed text-lg">
               The transition from academic knowledge to real-world engineering practice requires more than theoretical understanding. It demands exposure to industry standards, engineering methodologies, design practices, and the practical challenges encountered on live projects.
             </p>
             <p className="mb-6 leading-relaxed text-lg">
-              At <strong className="text-[#108A00] dark:text-[#4ADE80]">Invictus Engineering</strong>, we bridge this gap through specialized technical training and capability-development programs designed for <strong>fresh engineering graduates, experienced professionals, and corporate engineering teams</strong>. Our programs are structured to develop practical engineering competence and enable participants to confidently apply their knowledge in real project environments.
+              At <strong className="text-[#108A00]">Invictus Engineering</strong>, we bridge this gap through specialized technical training and capability-development programs designed for <strong>fresh engineering graduates, experienced professionals, and corporate engineering teams</strong>. Our programs are structured to develop practical engineering competence and enable participants to confidently apply their knowledge in real project environments.
             </p>
             <p className="mb-6 leading-relaxed text-lg">
               Our training programs are delivered by <strong>experienced senior engineers and industry professionals actively involved in live engineering projects</strong>. This ensures that the learning goes beyond classroom theory, incorporating practical design considerations, project workflows, industry best practices, and lessons learned from actual engineering applications.
@@ -71,7 +71,7 @@ export default function EngineeringTrainingPage() {
           </FadeUpBox>
 
           <FadeUpBox>
-            <h3 className="text-2xl font-heading font-bold text-[#0A192F] dark:text-white mb-8">
+            <h3 className="text-2xl font-heading font-bold text-[#071A2B] dark:text-white mb-8">
               Key Training &amp; Capability Development Areas
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
@@ -106,9 +106,9 @@ export default function EngineeringTrainingPage() {
                 }
               ].map((item, idx) => (
                 <div key={idx} className="p-6 bg-gray-50 dark:bg-white/5 rounded-2xl border border-gray-200/70 dark:border-white/10 flex items-start">
-                  <CheckCircle className="h-6 w-6 text-[#108A00] dark:text-[#4ADE80] mr-4 shrink-0 mt-1" />
+                  <CheckCircle className="h-6 w-6 text-[#108A00] mr-4 shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-bold text-lg text-[#0A192F] dark:text-white mb-2">{item.title}</h4>
+                    <h4 className="font-bold text-lg text-[#071A2B] dark:text-white mb-2">{item.title}</h4>
                     <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
@@ -116,12 +116,12 @@ export default function EngineeringTrainingPage() {
             </div>
           </FadeUpBox>
 
-          <FadeUpBox className="bg-[#0A192F] p-10 rounded-3xl text-center shadow-2xl relative overflow-hidden text-white">
+          <FadeUpBox className="bg-[#071A2B] border border-[#0B5CAD]/30 p-10 rounded-3xl text-center shadow-2xl relative overflow-hidden text-white">
             <div className="absolute top-0 right-0 w-80 h-80 bg-[#108A00]/20 rounded-full blur-[90px]" />
             <div className="relative z-10">
               <h3 className="text-2xl font-heading font-bold mb-4">Upskill Your Workforce</h3>
               <p className="text-gray-300 mb-8 text-lg">We offer custom corporate batches and individual engineer enrollments.</p>
-              <Link href="/contact-us" className="inline-flex items-center justify-center rounded-2xl bg-[#108A00] hover:bg-[#0C6B00] px-8 py-4 text-base font-bold text-white shadow-xl transition-all duration-200">
+              <Link href="/contact-us" className="inline-flex items-center justify-center rounded-2xl bg-[#108A00] hover:bg-[#0D7000] px-8 py-4 text-base font-bold text-white shadow-xl transition-all duration-200">
                 Inquire About Training Programs <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </div>

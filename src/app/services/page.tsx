@@ -46,10 +46,10 @@ export default function ServicesPage() {
         bgImage="/images/banners/services-banner.png"
       />
 
-      <section className="py-16 md:py-24 bg-white dark:bg-[#0A0E14]">
+      <section className="py-16 md:py-24 bg-white dark:bg-[#04101C]">
         <StaggerWrapper className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <FadeUpBox className="mb-16 max-w-3xl mx-auto">
-            <h2 className="text-3xl font-heading font-bold text-[#0A192F] dark:text-white mb-4">
+            <h2 className="text-3xl font-heading font-bold text-[#071A2B] dark:text-white mb-4">
               End-to-End Plant Engineering
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300">
@@ -64,16 +64,16 @@ export default function ServicesPage() {
                   href={service.link}
                   className="flex flex-col h-full bg-gray-50 dark:bg-white/5 rounded-3xl border border-gray-200/80 dark:border-white/10 p-8 md:p-10 shadow-sm hover:shadow-2xl hover:border-[#108A00]/40 transition-all duration-300 group hover:-translate-y-1.5"
                 >
-                  <div className="h-14 w-14 rounded-2xl bg-[#108A00]/10 dark:bg-[#108A00]/20 text-[#108A00] dark:text-[#4ADE80] flex items-center justify-center mb-6 group-hover:bg-[#108A00] group-hover:text-white transition-colors duration-300">
+                  <div className="h-14 w-14 rounded-2xl bg-[#108A00]/10 text-[#108A00] flex items-center justify-center mb-6 group-hover:bg-[#108A00] group-hover:text-white transition-colors duration-300">
                     <service.icon className="h-7 w-7" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-3 text-[#0A192F] dark:text-white group-hover:text-[#108A00] transition-colors">
+                  <h3 className="text-2xl font-bold mb-3 text-[#071A2B] dark:text-white group-hover:text-[#108A00] transition-colors">
                     {service.title}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-8 text-base leading-relaxed flex-grow">
                     {service.desc}
                   </p>
-                  <div className="inline-flex items-center font-bold text-[#108A00] dark:text-[#4ADE80] group-hover:text-[#0C6B00] transition-colors mt-auto text-sm">
+                  <div className="inline-flex items-center font-bold text-[#108A00] group-hover:text-[#0D7000] transition-colors mt-auto text-sm">
                     Explore Service Details <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </Link>
