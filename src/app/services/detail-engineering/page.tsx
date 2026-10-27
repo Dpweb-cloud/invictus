@@ -3,6 +3,7 @@ import { CheckCircle2, ArrowRight } from "lucide-react";
 import { SubpageBanner } from "@/components/ui/SubpageBanner";
 import { Accordion } from "@/components/ui/Accordion";
 import { StaggerWrapper, FadeUpBox } from "@/components/ui/Animations";
+import { PipingDeliverablesList } from "@/components/services/PipingDeliverablesList";
 
 export const metadata = {
   title: "Detail Engineering | Invictus Engineering",
@@ -10,35 +11,6 @@ export const metadata = {
 };
 
 export default function DetailEngineering() {
-  const pipingList = [
-    "Plant Layout / Plot Plan",
-    "Equipment Layout",
-    "Piping Material Specification",
-    "Nozzle Orientation",
-    "Stress Analysis",
-    "3D Modeling",
-    "Piping Layout / GA",
-    "Piping Isometrics",
-    "Material Take Off",
-    "Tie-In Drawings",
-    "Civil Information Drawings",
-    "Pipe Rack Planning",
-    "Underground Coordination",
-    "As-Built 3D Models",
-    "Site Construction Support",
-    "Procurement / Vendor Support",
-  ];
-
-  const renderGrid = (items: string[]) => (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-3 gap-x-6">
-      {items.map((item, idx) => (
-        <div key={idx} className="flex items-start">
-          <CheckCircle2 className="h-4 w-4 text-[#108A00] dark:text-[#108A00] mt-1 mr-2 shrink-0" />
-          <span className="text-gray-700 dark:text-gray-300 font-medium text-sm">{item}</span>
-        </div>
-      ))}
-    </div>
-  );
 
   return (
     <div className="flex flex-col bg-background min-h-screen">
@@ -119,13 +91,13 @@ export default function DetailEngineering() {
               Engineering Capabilities &amp; Deliverables Breakdown
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl leading-relaxed mb-8">
-              Explore our core in-house Piping Engineering capabilities and deliverables breakdown below.
+              Explore our core in-house Piping Engineering capabilities and deliverables breakdown below. Click any item marked with PDF to view sample technical documentation.
             </p>
           </FadeUpBox>
 
           <FadeUpBox className="space-y-4 max-w-5xl">
             <Accordion title="Piping Engineering" defaultOpen={true}>
-              {renderGrid(pipingList)}
+              <PipingDeliverablesList />
             </Accordion>
           </FadeUpBox>
 

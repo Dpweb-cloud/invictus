@@ -32,21 +32,22 @@ export default function ClientsPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {clients.map((client, idx) => {
-              const isBoost = client.name.toUpperCase().includes("BPCL") || client.name.toUpperCase().includes("TOOLTECH");
+              const isBoost = client.name.toUpperCase().includes("BPCL");
+              const isTooltech = client.name.toUpperCase().includes("TOOLTECH");
               return (
                 <FadeUpBox
                   key={idx}
                   className="bg-gray-50 dark:bg-white/5 rounded-2xl p-6 flex flex-col items-center justify-center gap-4 border border-gray-200/70 dark:border-white/10 hover:border-[#108A00] hover:shadow-xl transition-all duration-300 group overflow-hidden"
                 >
-                  <div className="h-20 flex items-center justify-center">
+                  <div className="h-20 w-full flex items-center justify-center px-2">
                     <Image
                       src={client.logo}
                       alt={client.name}
                       width={160}
                       height={72}
-                      className={`object-contain max-h-16 w-auto grayscale group-hover:grayscale-0 transition-all duration-300 ${
-                        isBoost ? "scale-[1.45]" : ""
-                      }`}
+                      className={`object-contain max-h-14 sm:max-h-16 w-auto grayscale group-hover:grayscale-0 transition-all duration-300 ${
+                        isBoost ? "scale-[1.25]" : ""
+                      } ${isTooltech ? "max-w-[150px]" : ""}`}
                       unoptimized
                     />
                   </div>

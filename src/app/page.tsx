@@ -324,14 +324,24 @@ export default function Home() {
             animate="visible"
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.12 } } }}
           >
+            {/* Engineering Badge */}
+            <motion.div 
+              variants={fadeIn} 
+              custom={0} 
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#38DF25] text-xs font-bold uppercase tracking-wider mb-5 shadow-sm"
+            >
+              <span className="w-2 h-2 rounded-full bg-[#108A00] animate-pulse" />
+              <span>Detail &amp; Piping Engineering Design</span>
+            </motion.div>
+
             {/* Main Headline (Capitalized) */}
             <motion.h1 
               variants={fadeIn} 
               custom={1} 
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-heading font-bold uppercase text-white leading-[1.15] tracking-wide mb-6 drop-shadow-lg max-w-4xl"
             >
-              ENGINEERING THE INFRASTRUCTURE <br className="hidden sm:inline" />
-              <span className="text-[#38BDF8]">BEHIND TOMORROW&apos;S INDUSTRY</span>
+              DETAIL &amp; PIPING ENGINEERING <br className="hidden sm:inline" />
+              <span className="text-[#38BDF8]">FOR GLOBAL INDUSTRIAL PLANTS</span>
             </motion.h1>
 
             {/* Supporting Subtitle */}
@@ -340,7 +350,7 @@ export default function Home() {
               custom={2} 
               className="text-base sm:text-lg lg:text-xl text-slate-200 leading-relaxed mb-8 max-w-2xl font-light drop-shadow-sm"
             >
-              Engineering solutions, project management, and technical expertise for complex industrial infrastructure, oil &amp; gas, chemical, and energy facilities.
+              Expert 3D piping layout, stress analysis, plant design, and multidisciplinary engineering deliverables for oil &amp; gas, chemical, and energy facilities.
             </motion.p>
 
             {/* Pill CTAs (matching design reference) */}
@@ -382,20 +392,21 @@ export default function Home() {
             {/* Track 1 */}
             <div className="flex shrink-0 items-center justify-around gap-5 sm:gap-7 pr-5 sm:pr-7">
               {clients.map((client, idx) => {
-                const isBoost = client.name.toUpperCase().includes("BPCL") || client.name.toUpperCase().includes("TOOLTECH");
+                const isBoost = client.name.toUpperCase().includes("BPCL");
+                const isTooltech = client.name.toUpperCase().includes("TOOLTECH");
                 return (
                   <div
                     key={`t1-${client.name}-${idx}`}
-                    className="flex-shrink-0 flex items-center justify-center h-20 bg-white px-7 py-3.5 rounded-xl border border-slate-200/80 shadow-sm overflow-hidden"
+                    className="flex-shrink-0 flex items-center justify-center h-20 bg-white px-6 py-3 rounded-xl border border-slate-200/80 shadow-sm overflow-hidden"
                   >
                     <Image
                       src={client.logo}
                       alt={client.name}
                       width={170}
                       height={65}
-                      className={`object-contain max-h-14 sm:max-h-16 w-auto transition-transform duration-200 hover:scale-105 ${
-                        isBoost ? "scale-[1.45]" : ""
-                      }`}
+                      className={`object-contain max-h-12 sm:max-h-14 w-auto transition-transform duration-200 hover:scale-105 ${
+                        isBoost ? "scale-[1.3]" : ""
+                      } ${isTooltech ? "max-w-[150px]" : ""}`}
                       unoptimized
                     />
                   </div>
@@ -406,20 +417,21 @@ export default function Home() {
             {/* Track 2 (Seamless Infinite Duplicate) */}
             <div className="flex shrink-0 items-center justify-around gap-5 sm:gap-7 pr-5 sm:pr-7">
               {clients.map((client, idx) => {
-                const isBoost = client.name.toUpperCase().includes("BPCL") || client.name.toUpperCase().includes("TOOLTECH");
+                const isBoost = client.name.toUpperCase().includes("BPCL");
+                const isTooltech = client.name.toUpperCase().includes("TOOLTECH");
                 return (
                   <div
                     key={`t2-${client.name}-${idx}`}
-                    className="flex-shrink-0 flex items-center justify-center h-20 bg-white px-7 py-3.5 rounded-xl border border-slate-200/80 shadow-sm overflow-hidden"
+                    className="flex-shrink-0 flex items-center justify-center h-20 bg-white px-6 py-3 rounded-xl border border-slate-200/80 shadow-sm overflow-hidden"
                   >
                     <Image
                       src={client.logo}
                       alt={client.name}
                       width={170}
                       height={65}
-                      className={`object-contain max-h-14 sm:max-h-16 w-auto transition-transform duration-200 hover:scale-105 ${
-                        isBoost ? "scale-[1.45]" : ""
-                      }`}
+                      className={`object-contain max-h-12 sm:max-h-14 w-auto transition-transform duration-200 hover:scale-105 ${
+                        isBoost ? "scale-[1.3]" : ""
+                      } ${isTooltech ? "max-w-[150px]" : ""}`}
                       unoptimized
                     />
                   </div>

@@ -39,7 +39,7 @@ export default function RootLayout({
         "font-sans"
       )}
     >
-      <body className="min-h-full flex flex-col font-sans text-[#071A2B] bg-[#F8FAFC] selection:bg-[#108A00] selection:text-white transition-colors duration-300">
+      <body className="min-h-full flex flex-col font-sans text-[#071A2B] bg-[#F8FAFC] selection:bg-[#108A00]/40 selection:text-white transition-colors duration-300">
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
